@@ -1,6 +1,8 @@
 doctype html
 html
 	head
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+
 		title= title
 		link(rel='shortcut icon', href='http://www.fcgov.com/favicon.ico?03252014', type='image/x-icon')
 
@@ -10,23 +12,27 @@ html
 		link(rel='apple-touch-icon', sizes='120x120', href='/images/apple-touch-icon-iphone-retina-120x120.png')
 		link(rel='apple-touch-icon', sizes='152x152', href='/images/apple-touch-icon-ipad-retina-152x152.png')
 
-
-		link(rel='stylesheet', href='/stylesheets/style.css')
 		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/yeti/bootstrap.min.css')
 		link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+", crossorigin="anonymous")
+		link(rel='stylesheet', href='/stylesheets/style.css')
 	body(class="page-#{pageName}")
 	block content
 
-	#nav.navbar.navbar-default.navbar-fixed-bottom
-		.container
-			.navbar-header 
-				a.navbar-brand.text-muted Safety Reference Guide - City of Fort Collins
+	nav#nav-main.nav.navbar.navbar-default.navbar-fixed-bottom
+		.container-fluid
+			.navbar-header
+				a.text-muted Safety Reference Guide - City of Fort Collins	
 			.navbar-collapse.collapse
 				ul.nav.navbar-nav.navbar-right
 					li
-						a(href="/") Reference Guide
+						a.text-primary(href="/") Reference Guide
 					li
-						a(href="/about") About
+						a.text-primary(href="/about") About
+		.container-fluid
+			.row
+				.col-xs-12
+					.clearfix
+						| &nbsp;&nbsp;
 
 
 	script(src='https://code.jquery.com/jquery-2.2.2.min.js', integrity='sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI=', crossorigin='anonymous')

@@ -1,6 +1,17 @@
+body, html {
+  padding: 0px;
+  margin: 0;
+  width: 100%;
+}
+
 body {
-  padding: 50px;
+  padding: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.container-fluid.container-guide{
+	padding-left: 0;
+	padding-right: 0;
 }
 
 a {
@@ -11,10 +22,6 @@ a {
     border-radius: 50%;
 }
 
-.navbar-brand.text-muted {
-    color: #999 !important;
-}
-
 .page-guide{
 	margin:0;
 	padding:0;
@@ -22,4 +29,37 @@ a {
 
 .page-guide .panel{
 	margin:0 !important;
+}
+
+.container-guide{
+	margin-bottom:60px;
+}
+
+#nav-main {
+	height:120px;
+	bottom:-60px;
+}
+
+#nav-main .navbar-header {
+    padding-top:10px;
+}
+
+#nav-main .text-muted {
+    color: #999 !important;
+}
+
+#nav-main .text-primary {
+    color: #008cba !important;
+}
+
+#nav-main .navbar-collapse {
+	display: block !important;
+}
+
+#nav-main .navbar-right {
+	float:right !important;
+}
+
+#nav-main .navbar-right li {
+	float:left !important;
 }

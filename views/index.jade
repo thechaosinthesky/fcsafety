@@ -1,177 +1,178 @@
 extends layout
 
 block content
-	.row
-		.col-xs-12
-			- var tabIndex = 0
-			- var tabID = ''
-
-			- tabIndex += 1
-			- tabID = "collapse" + tabIndex
-			#accordion.panel-group(role='tablist', aria-multiselectable='true')
-				.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
-					#headingOne.panel-heading(role='tab')
-						h4.panel-title
-							a(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
-								| Tornado
-					div.panel-collapse.collapse.in(id="#{tabID}", role='tabpanel', aria-labelledby='headingOne')
-						.panel-body
-							p In the event of a Tornado, warnings must be issued through all available media outlets.
-							p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-				
-				- tabIndex += 1
-				- tabID = "collapse" + tabIndex
-				.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
-					#headingTwo.panel-heading(role='tab')
-						h4.panel-title
-							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
-								| Structure Fire
-					div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingTwo')
-						.panel-body
-							p After calling the fire department, any loose debri that can be cleared around the fire should be moved from the area.
-							p Anim pariatur cliche reprehenderit, enim eiusmod high life
-							p accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-				
-				- tabIndex += 1
-				- tabID = "collapse" + tabIndex
-				.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
-					#headingThree.panel-heading(role='tab')
-						h4.panel-title
-							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
-								| Electrical hazard
-					div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
-						.panel-body
-							p Warning tape should be put up around the hazard.
-							p Anim pariatur cliche reprehenderit, enim eiusmod 
-							p high life accusamus terry richardson ad squid. 3 wolf moon officia aute, 
-							p non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+	.container-fluid.container-guide
+		.row
+			.col-xs-12
+				- var tabIndex = 0
+				- var tabID = ''
 
 				- tabIndex += 1
 				- tabID = "collapse" + tabIndex
-				.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
-					#headingThree.panel-heading(role='tab')
-						h4.panel-title
-							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
-								| Flash Flood
-					div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
-						.panel-body
-							p Warnings should be issued in the area
-							p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+				#accordion.panel-group(role='tablist', aria-multiselectable='true')
+					.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+						#headingOne.panel-heading(role='tab')
+							h4.panel-title
+								a(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
+									| Tornado
+						div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingOne')
+							.panel-body
+								p In the event of a Tornado, warnings must be issued through all available media outlets.
+								p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					
+					- tabIndex += 1
+					- tabID = "collapse" + tabIndex
+					.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+						#headingTwo.panel-heading(role='tab')
+							h4.panel-title
+								a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+									| Structure Fire
+						div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingTwo')
+							.panel-body
+								p After calling the fire department, any loose debri that can be cleared around the fire should be moved from the area.
+								p Anim pariatur cliche reprehenderit, enim eiusmod high life
+								p accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					
+					- tabIndex += 1
+					- tabID = "collapse" + tabIndex
+					.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+						#headingThree.panel-heading(role='tab')
+							h4.panel-title
+								a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+									| Electrical hazard
+						div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
+							.panel-body
+								p Warning tape should be put up around the hazard.
+								p Anim pariatur cliche reprehenderit, enim eiusmod 
+								p high life accusamus terry richardson ad squid. 3 wolf moon officia aute, 
+								p non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
 
-				- tabIndex += 1
-				- tabID = "collapse" + tabIndex
-				.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
-					#headingThree.panel-heading(role='tab')
-						h4.panel-title
-							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
-								| Armed shooter
-					div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
-						.panel-body
-							p Warnings should be issued in the area
-							p Anim pariatur cliche reprehenderit, enim eiusmod 
-							p high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					- tabIndex += 1
+					- tabID = "collapse" + tabIndex
+					.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+						#headingThree.panel-heading(role='tab')
+							h4.panel-title
+								a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+									| Flash Flood
+						div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
+							.panel-body
+								p Warnings should be issued in the area
+								p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
 
-				- tabIndex += 1
-				- tabID = "collapse" + tabIndex
-				.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
-					#headingThree.panel-heading(role='tab')
-						h4.panel-title
-							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
-								| Earthquake
-					div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
-						.panel-body
-							p Warnings should be issued in the area
-							p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					- tabIndex += 1
+					- tabID = "collapse" + tabIndex
+					.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+						#headingThree.panel-heading(role='tab')
+							h4.panel-title
+								a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+									| Armed shooter
+						div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
+							.panel-body
+								p Warnings should be issued in the area
+								p Anim pariatur cliche reprehenderit, enim eiusmod 
+								p high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
 
-				- tabIndex += 1
-				- tabID = "collapse" + tabIndex
-				.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
-					#headingThree.panel-heading(role='tab')
-						h4.panel-title
-							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
-								| Fruit bat attack
-					div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
-						.panel-body
-							p Warnings should be issued in the area
-							p Anim pariatur cliche reprehenderit, enim 
-							p eiusmod high life accusamus terry richardson ad squid. 3 wolf moon 
-							p officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum 
-							p eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					- tabIndex += 1
+					- tabID = "collapse" + tabIndex
+					.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+						#headingThree.panel-heading(role='tab')
+							h4.panel-title
+								a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+									| Earthquake
+						div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
+							.panel-body
+								p Warnings should be issued in the area
+								p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
 
-				- tabIndex += 1
-				- tabID = "collapse" + tabIndex
-				.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
-					#headingThree.panel-heading(role='tab')
-						h4.panel-title
-							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
-								| Alien invasion
-					div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
-						.panel-body
-							p Warnings should be issued in the area
-							p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. 
-							p Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					- tabIndex += 1
+					- tabID = "collapse" + tabIndex
+					.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+						#headingThree.panel-heading(role='tab')
+							h4.panel-title
+								a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+									| Fruit bat attack
+						div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
+							.panel-body
+								p Warnings should be issued in the area
+								p Anim pariatur cliche reprehenderit, enim 
+								p eiusmod high life accusamus terry richardson ad squid. 3 wolf moon 
+								p officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum 
+								p eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
 
-				- tabIndex += 1
-				- tabID = "collapse" + tabIndex
-				.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
-					#headingThree.panel-heading(role='tab')
-						h4.panel-title
-							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
-								| Water shortage
-					div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
-						.panel-body
-							p Warnings should be issued in the area
-							p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					- tabIndex += 1
+					- tabID = "collapse" + tabIndex
+					.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+						#headingThree.panel-heading(role='tab')
+							h4.panel-title
+								a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+									| Alien invasion
+						div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
+							.panel-body
+								p Warnings should be issued in the area
+								p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. 
+								p Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
 
-				- tabIndex += 1
-				- tabID = "collapse" + tabIndex
-				.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
-					#headingThree.panel-heading(role='tab')
-						h4.panel-title
-							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
-								| Koala infestation
-					div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
-						.panel-body
-							p Warnings should be issued in the area
-							p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. 
-							p Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. 
-							p Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					- tabIndex += 1
+					- tabID = "collapse" + tabIndex
+					.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+						#headingThree.panel-heading(role='tab')
+							h4.panel-title
+								a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+									| Water shortage
+						div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
+							.panel-body
+								p Warnings should be issued in the area
+								p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
 
-				- tabIndex += 1
-				- tabID = "collapse" + tabIndex
-				.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
-					#headingThree.panel-heading(role='tab')
-						h4.panel-title
-							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
-								| Zoo animal uprising
-					div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
-						.panel-body
-							p Warnings should be issued in the area
-							p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, 
-							p non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					- tabIndex += 1
+					- tabID = "collapse" + tabIndex
+					.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+						#headingThree.panel-heading(role='tab')
+							h4.panel-title
+								a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+									| Koala infestation
+						div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
+							.panel-body
+								p Warnings should be issued in the area
+								p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. 
+								p Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. 
+								p Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
 
-				- tabIndex += 1
-				- tabID = "collapse" + tabIndex
-				.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
-					#headingThree.panel-heading(role='tab')
-						h4.panel-title
-							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
-								| Wifi outage
-					div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
-						.panel-body
-							p Warnings should be issued in the area
-							p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, 
-							p sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					- tabIndex += 1
+					- tabID = "collapse" + tabIndex
+					.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+						#headingThree.panel-heading(role='tab')
+							h4.panel-title
+								a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+									| Zoo animal uprising
+						div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
+							.panel-body
+								p Warnings should be issued in the area
+								p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, 
+								p non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
 
-				- tabIndex += 1
-				- tabID = "collapse" + tabIndex
-				.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='true', href="##{tabID}", aria-controls="#{tabID}")
-					#headingThree.panel-heading(role='tab')
-						h4.panel-title
-							a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
-								| Groundwater contamination
-					div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
-						.panel-body
-							p Warnings should be issued in the area
-							p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+					- tabIndex += 1
+					- tabID = "collapse" + tabIndex
+					.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+						#headingThree.panel-heading(role='tab')
+							h4.panel-title
+								a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+									| Wifi outage
+						div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
+							.panel-body
+								p Warnings should be issued in the area
+								p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, 
+								p sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+					- tabIndex += 1
+					- tabID = "collapse" + tabIndex
+					.panel.panel-default(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+						#headingThree.panel-heading(role='tab')
+							h4.panel-title
+								a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+									| Groundwater contamination
+						div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingThree')
+							.panel-body
+								p Warnings should be issued in the area
+								p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
 
