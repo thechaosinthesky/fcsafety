@@ -1,0 +1,6 @@
+var FCS = {
+	init: function(){
+		
+	}
+};
+
