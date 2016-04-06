@@ -7,7 +7,9 @@ var dataFile = './data/filestore.json'
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	jsonfile.readFile(dataFile, function(err, obj) {
-		res.render('index', { title: 'Safety Reference Guide - City of Fort Collins', pageName:'guide', menuItems: obj["menu-items"] });
+		console.log(req.query);
+		console.log(req.params);
+		res.render('index', { title: 'Safety Reference Guide - City of Fort Collins', pageName:'guide', menuItems: obj["menu-items"], theme: (req.query.theme ? req.query.theme : 'yeti') });
 	});
 });
 
