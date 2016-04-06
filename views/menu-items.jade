@@ -1,0 +1,68 @@
+extends layout_menu_builder
+
+block content
+
+	.container-fluid.container-guide
+		.row
+			.col-xs-12
+				#accordion.panel-group(role='tablist', aria-multiselectable='true')
+					- tabIndex = 0
+					each item, i in menuItems
+						- tabIndex += 1
+						- tabID = "collapse" + tabIndex
+						.panel.panel-default.menu-item
+							.panel-heading(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+								h4.panel-title
+									a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+										i.fa.fa-pencil
+										| &nbsp;&nbsp;
+										| Menu Item #{tabIndex}
+									| &nbsp;&nbsp;-&nbsp;&nbsp;
+									input.menu-item-name(name='menu-item-name', type='text', value="#{item.name}")
+							div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingTwo')
+								.panel-body
+									form
+										textarea.form-control.menu-item-content(name='menu-item-content')
+											= item.content
+										input.btn.btn-primary.pull-right.update-menu-items(type="button", value="Update")
+										input.btn.btn-danger.pull-right(data-item-index="#{i}", type="button", value="Delete")
+
+					- tabIndex += 1
+					- tabID = "collapse" + tabIndex
+					.panel.panel-default.menu-new-item
+							.panel-heading(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+								h4.panel-title
+									a.collapsed(role='button', data-toggle='collapse', data-parent='#accordion', aria-expanded='false', href="##{tabID}", aria-controls="#{tabID}")
+										i.fa.fa-plus-circle
+										| &nbsp;&nbsp;
+										| Add New
+							div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingTwo')
+								.panel-body
+									form
+										.form-group
+											label.control-label(for='menu-new-item-name') 
+												strong Menu Item Name
+											input.form-control.menu-item-name.menu-new-item-name(name='menu-new-item-name', placeholder='Name', type='text', value="")
+										.form-group
+											label.control-label(for='menu-new-item-content') 
+												strong Content
+											textarea.form-control.menu-item-content.menu-new-item-content(name='menu-new-item-content')
+										input.btn.btn-primary.pull-right.add-menu-item(type="button", value="Save")
+										button.btn.btn-default.pull-right(type="reset") Cancel
+
+	nav#nav-main.nav.navbar.navbar-default.navbar-fixed-bottom
+		.container-fluid
+			.navbar-header
+				a.text-muted Safety Reference Guide - City of Fort Collins	
+			.navbar-collapse.collapse
+				ul.nav.navbar-nav.navbar-right
+					li
+						a.text-primary(href="/") Reference Guide
+					li
+						a.text-primary(href="/about") About
+		.container-fluid
+			.row
+				.col-xs-12
+					.clearfix
+
+	
