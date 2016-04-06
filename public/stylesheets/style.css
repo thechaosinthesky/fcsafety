@@ -14,6 +14,16 @@ body {
 	padding-right: 0;
 }
 
+.container-fluid.container-guide .row{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.container-fluid.container-guide .col-xs-12{
+	padding-left: 0;
+	padding-right: 0;
+}
+
 a {
   color: #00B7FF;
 }
@@ -36,8 +46,8 @@ a {
 }
 
 #nav-main {
-	height:120px;
-	bottom:-60px;
+	height:80px;
+	bottom:0px;
 }
 
 #nav-main .navbar-header {

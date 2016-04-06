@@ -18,14 +18,14 @@ block content
 										| &nbsp;&nbsp;
 										| Menu Item #{tabIndex}
 									| &nbsp;&nbsp;-&nbsp;&nbsp;
-									input.menu-item-name(name='menu-item-name', type='text', value="#{item.name}")
+									input.menu-item-name(data-menu-item-name="#{item.name}", name='menu-item-name', type='text', value="#{item.name}")
 							div.panel-collapse.collapse(id="#{tabID}", role='tabpanel', aria-labelledby='headingTwo')
 								.panel-body
 									form
 										textarea.form-control.menu-item-content(name='menu-item-content')
 											= item.content
 										input.btn.btn-primary.pull-right.update-menu-items(type="button", value="Update")
-										input.btn.btn-danger.pull-right(data-item-index="#{i}", type="button", value="Delete")
+										input.btn.btn-danger.pull-right.delete-menu-item(data-item-index="#{i}", type="button", value="Delete")
 
 					- tabIndex += 1
 					- tabID = "collapse" + tabIndex
