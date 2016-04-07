@@ -40,11 +40,4 @@ router.get('/about', function(req, res, next) {
   res.render('about', { title: 'Safety Reference Guide - City of Fort Collins', pageName:'about' });
 });
 
-function getMenuItems(){
-	jsonfile.readFile(dataFile, function(err, obj) {
-		console.log(obj["menu-items"]);
-		return obj["menu-items"];
-	});
-}
-
 module.exports = router;
